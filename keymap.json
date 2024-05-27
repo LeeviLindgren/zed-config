@@ -1,0 +1,64 @@
+[
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // Vim insert mode
+      "j j": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // Vim normal and visual mode
+      "+": "vim::EndOfLine",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePrevItem"
+    }
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "alt-k": "editor::SelectLargerSyntaxNode",
+      "alt-j": "editor::SelectSmallerSyntaxNode"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // https://github.com/zed-industries/zed/issues/4753
+      // https://github.com/zed-industries/zed/issues/4270
+      // "escape": "project_panel::ToggleFocus",
+      // "enter": "project_panel::Open",
+      "o": "project_panel::NewDirectory",
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+      // "x": "project_panel::Cut",
+      // "y": "project_panel::Copy",
+      // "p": "project_panel::Paste",
+      // "d": "project_panel::Delete",
+      // Directory expansion
+      "l": "project_panel::ExpandSelectedEntry",
+      "h": "project_panel::CollapseSelectedEntry",
+      // Move up and down
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrev"
+      // "shift-d": "project_panel::Delete"
+    }
+  },
+  {
+    // Move between panes
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-I": "copilot::Suggest"
+    }
+  }
+]
