@@ -60,5 +60,14 @@
     "bindings": {
       "ctrl-shift-I": "copilot::Suggest"
     }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-n": "workspace::NewTerminal",
+      "cmd-w": "pane::CloseActiveItem",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePrevItem"
+    }
   }
 ]
