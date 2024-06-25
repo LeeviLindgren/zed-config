@@ -15,5 +15,17 @@
   "show_copilot_suggestions": false,
   "theme": "Nordfox",
   "ui_font_size": 14,
-  "vim_mode": true
+  "vim_mode": true,
+  "assistant": {
+    "version": "1",
+    "provider": {
+      "default_model": {
+        "name": "codellama:7b",
+        "max_tokens": 2048,
+        "keep_alive": "10m"
+      },
+      "name": "ollama",
+      "low_speed_timeout_in_seconds": null
+    }
+  }
 }
